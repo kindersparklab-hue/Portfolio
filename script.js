@@ -3,6 +3,7 @@ new fullpage('#fullpage', {
   navigation: true,
   navigationPosition: 'right',
   scrollOverflow: true,
-  sectionsColor: ['#111', '#222', '#111', '#222'],
-  anchors: ['about', 'skills', 'projects', 'contact'],
+  anchors: ['hero', 'about', 'skills', 'projects', 'contact'],
+  sectionSelector: '.section',
+  licenseKey: ''  // if you're using the free version
 });
