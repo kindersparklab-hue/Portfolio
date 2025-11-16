@@ -1,0 +1,118 @@
+/* Reset & basic */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* About Section */
+#section-about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#section-about .photo {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+#section-about .photo img {
+  width: 100%;
+  display: block;
+}
+
+#section-about .text {
+  flex: 2;
+  min-width: 250px;
+  max-width: 600px;
+  margin: 20px;
+}
+
+#section-about .text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+#section-about .text p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Skills Section */
+#section-skills {
+  text-align: center;
+}
+
+#section-skills ul {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#section-skills li {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#section-skills li:hover {
+  transform: translateY(-5px);
+  background: #fff;
+}
+
+/* Projects Section */
+#section-projects {
+  padding: 40px;
+}
+
+#section-projects .project {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#section-projects .project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+#section-projects h3 {
+  margin-top: 0;
+}
+
+/* Contact Section */
+#section-contact {
+  text-align: center;
+  padding: 30px;
+}
+
+#section-contact a {
+  color: #3366cc;
+  font-weight: bold;
+}
+
+/* fullPage navigation bullets (optional) */
+.fp-nav li a span, .fp-nav li a i{
+  background: #333;
+}
+
+.fp-nav li:hover a span, .fp-nav .active a span {
+  background: #fff;
+}
