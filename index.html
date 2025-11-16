@@ -1,258 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Irtaza Hassan Ishtiaq Aziz | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* GENERAL STYLES */
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #FF6B6B, #FFD93D, #6BCB77);
-            color: #333;
-            scroll-behavior: smooth;
-        }
-        a { text-decoration: none; color: inherit; }
-
-        header {
-            text-align: center;
-            padding: 60px 20px 40px;
-            color: #fff;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            animation: fadeInDown 1.5s ease;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            animation: fadeInUp 1.5s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: rgba(0,0,0,0.2);
-            padding: 15px 0;
-        }
-        nav a {
-            margin: 0 20px;
-            font-weight: 700;
-            color: #fff;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #222;
-        }
-
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 30px;
-            color: #222;
-            position: relative;
-        }
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #222;
-            margin-top: 8px;
-            border-radius: 2px;
-        }
-
-        /* ABOUT ME */
-        #about {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-            color: #333;
-        }
-        #about .photo {
-            flex: 1;
-            min-width: 250px;
-            max-width: 350px;
-            text-align: center;
-            animation: floatImage 3s ease-in-out infinite;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 25px rgba(0,0,0,0.3);
-            border: 5px solid #fff;
-        }
-        #about .photo img {
-            width: 100%;
-            display: block;
-        }
-        #about .text {
-            flex: 2;
-            min-width: 300px;
-            max-width: 650px;
-            animation: fadeIn 1.5s ease;
-        }
-        #about .text p {
-            line-height: 1.7;
-            font-size: 1.1rem;
-        }
-
-        /* SKILLS */
-        #skills ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            list-style: none;
-            padding: 0;
-        }
-        #skills li {
-            background: rgba(255,255,255,0.8);
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: transform 0.3s, background 0.3s;
-        }
-        #skills li:hover {
-            transform: translateY(-5px);
-            background: #fff;
-        }
-
-        /* PROJECTS */
-        #projects .project {
-            background: rgba(255,255,255,0.85);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        #projects .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-        }
-
-        /* CONTACT */
-        #contact p {
-            font-size: 1.1rem;
-            margin: 10px 0;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: rgba(0,0,0,0.2);
-            color: #fff;
-        }
-
-        /* ANIMATIONS */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px);}
-            to { opacity: 1; transform: translateY(0);}
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px);}
-            to { opacity: 1; transform: translateY(0);}
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px);}
-            to { opacity: 1; transform: translateY(0);}
-        }
-        @keyframes floatImage {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-            100% { transform: translateY(0); }
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            #about { flex-direction: column; text-align: center; }
-            #about .text { max-width: 100%; }
-            nav { flex-wrap: wrap; gap: 10px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Irtaza Hassan | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-    <h1>Ali Irtaza Hassan Ishtiaq Aziz</h1>
-    <p>Sales Intern & IT Enthusiast | Mid-Level Web & Tech Skills</p>
-</header>
-
-<!-- NAVIGATION -->
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<!-- ABOUT ME -->
-<section id="about">
-    <div class="photo">
-        <img src="Ali.png" alt="Ali Irtaza Hassan">
+  <div id="fullpage">
+    <!-- About Section -->
+    <div class="section" id="section-about">
+      <div class="about-content">
+        <div class="photo">
+          <img src="Ali.png" alt="Ali Irtaza Hassan" />
+        </div>
+        <div class="text">
+          <h1>About Me</h1>
+          <p>Hi, I’m <strong>Ali Irtaza Hassan Ishtiaq Aziz</strong>, a 19‑year‑old learner and explorer, born on February 2, 2006.</p>
+          <p>Currently, I work as a Sales Intern at XO Bills, gaining experience in communication, customer engagement, and real‑world business operations.</p>
+          <p>I have solid skills in IT tasks, data entry, coding, and mid‑level website work. I’m passionate about solving problems, creating simple but effective solutions, and constantly improving.</p>
+          <p>My drive comes from a strong willingness to learn and grow. I love exploring new cultures, meeting people, and expanding my knowledge. My interests also include horses, mountains, peaceful places, and discovering different lifestyles.</p>
+        </div>
+      </div>
     </div>
-    <div class="text">
-        <h2>About Me</h2>
-        <p>Hi, I’m <strong>Ali Irtaza Hassan Ishtiaq Aziz</strong>, a 19-year-old learner and explorer, born on February 2, 2006.  
-        Currently, I work as a <strong>Sales Intern at XO Bills</strong>, gaining experience in communication, customer engagement, and real-world business operations.</p>
-        <p>I have solid skills in <strong>IT tasks, data entry, coding, and mid-level website work</strong>.  
-        I’m passionate about solving problems, creating simple, effective solutions, and constantly improving my skills.</p>
-        <p>My drive comes from a <strong>strong willingness to learn and grow</strong>. I love exploring new cultures, meeting people, and expanding my knowledge.  
-        My interests also include <strong>horses, mountains, peaceful places</strong>, and discovering different lifestyles, which keep me motivated and inspired.</p>
-    </div>
-</section>
 
-<!-- SKILLS -->
-<section id="skills">
-    <h2>My Skills</h2>
-    <ul>
+    <!-- Skills Section -->
+    <div class="section" id="section-skills">
+      <h2>My Skills</h2>
+      <ul>
         <li>Sales</li>
         <li>Customer Communication</li>
         <li>Data Entry</li>
-        <li>Mid-level Website Work</li>
+        <li>Mid‑level Website Work</li>
         <li>Coding</li>
         <li>IT Support</li>
         <li>Problem Solving</li>
         <li>Teamwork</li>
         <li>Learning New Tools</li>
         <li>Cultural Understanding</li>
-    </ul>
-</section>
+      </ul>
+    </div>
 
-<!-- PROJECTS -->
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
+    <!-- Projects Section -->
+    <div class="section" id="section-projects">
+      <h2>Projects</h2>
+      <div class="project">
         <h3>Project 1</h3>
-        <p>Description of your project goes here. You can add screenshots, links, or GitHub repos.</p>
-    </div>
-    <div class="project">
+        <p>Description of your project goes here. You can add a link to GitHub or screenshots.</p>
+      </div>
+      <div class="project">
         <h3>Project 2</h3>
-        <p>Description of your project goes here. Highlight your best work and achievements.</p>
+        <p>Description of another project goes here.</p>
+      </div>
     </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>Phone: +1234567890</p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-</section>
+    <!-- Contact Section -->
+    <div class="section" id="section-contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:Irtaza2206@gmail.com">Irtaza2206@gmail.com</a></p>
+      <p>Phone: <a href="tel:+971551517478">+971 55 151 7478</a></p>
+      <p>Location: United Arab Emirates</p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    </div>
+  </div>
 
-<!-- FOOTER -->
-<footer>
-    © 2025 Ali Irtaza Hassan Ishtiaq Aziz — All Rights Reserved
-</footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.14/fullpage.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
