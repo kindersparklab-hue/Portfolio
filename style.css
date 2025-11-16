@@ -5,7 +5,9 @@ body {
   background: #111;
 }
 
-a { color: #f0f0f0; }
+a {
+  color: #aaddff;
+}
 
 .hero {
   position: relative;
@@ -18,25 +20,44 @@ a { color: #f0f0f0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.5);
+  transform: scale(1.1);
+  animation: heroZoom 20s ease-in-out infinite;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
 }
 
 .hero-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
+  animation: fadeInText 3s ease-out 1;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  margin: 0;
 }
 
 .hero-text p {
   font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+@keyframes heroZoom {
+  0%, 100% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
 .about-content {
@@ -52,9 +73,9 @@ a { color: #f0f0f0; }
   min-width: 200px;
   max-width: 300px;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
 }
 
 .about-content .photo img {
@@ -72,6 +93,7 @@ a { color: #f0f0f0; }
 
 .about-content .text h2 {
   color: #fff;
+  margin-bottom: 15px;
 }
 
 .about-content .text p {
@@ -122,18 +144,24 @@ a { color: #f0f0f0; }
   width: 300px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-  transition: transform 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.8);
 }
 
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
 }
 
 .card-text {
@@ -163,7 +191,7 @@ a { color: #f0f0f0; }
 
 /* fullPage navigation bullets */
 .fp-nav li a span, .fp-nav li a i {
-  background: #aaa;
+  background: #888;
 }
 .fp-nav li:hover a span, .fp-nav .active a span {
   background: #fff;
