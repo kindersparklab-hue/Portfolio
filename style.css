@@ -1,54 +1,87 @@
-/* Reset & basic */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  color: #333;
+  color: #eee;
+  background: #111;
 }
 
-/* About Section */
-#section-about .about-content {
+a { color: #f0f0f0; }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+}
+
+.about-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px;
 }
 
-#section-about .photo {
+.about-content .photo {
   flex: 1;
   min-width: 200px;
   max-width: 300px;
   margin: 20px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
 
-#section-about .photo img {
+.about-content .photo img {
   width: 100%;
   display: block;
 }
 
-#section-about .text {
+.about-content .text {
   flex: 2;
   min-width: 250px;
   max-width: 600px;
   margin: 20px;
+  color: #ddd;
 }
 
-#section-about .text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.about-content .text h2 {
+  color: #fff;
 }
 
-#section-about .text p {
+.about-content .text p {
   line-height: 1.6;
   margin-bottom: 12px;
 }
 
-/* Skills Section */
 #section-skills {
   text-align: center;
+  padding: 40px;
 }
 
 #section-skills ul {
@@ -57,12 +90,12 @@ body {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 #section-skills li {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 22px;
   border-radius: 12px;
   font-weight: 500;
   transition: transform 0.3s, background 0.3s;
@@ -70,49 +103,68 @@ body {
 
 #section-skills li:hover {
   transform: translateY(-5px);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Projects Section */
 #section-projects {
   padding: 40px;
 }
 
-#section-projects .project {
-  background: rgba(255, 255, 255, 0.9);
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 600px;
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #222;
+  width: 300px;
   border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
 }
 
-#section-projects .project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+.card:hover {
+  transform: translateY(-8px);
 }
 
-#section-projects h3 {
-  margin-top: 0;
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-/* Contact Section */
+.card-text {
+  padding: 20px;
+}
+
+.card-text h3 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.card-text p {
+  color: #ccc;
+  line-height: 1.4;
+}
+
 #section-contact {
   text-align: center;
+  color: #ddd;
   padding: 30px;
 }
 
 #section-contact a {
-  color: #3366cc;
+  color: #aaddff;
   font-weight: bold;
 }
 
-/* fullPage navigation bullets (optional) */
-.fp-nav li a span, .fp-nav li a i{
-  background: #333;
+/* fullPage navigation bullets */
+.fp-nav li a span, .fp-nav li a i {
+  background: #aaa;
 }
-
 .fp-nav li:hover a span, .fp-nav .active a span {
   background: #fff;
 }
